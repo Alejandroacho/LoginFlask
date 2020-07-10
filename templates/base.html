@@ -1,0 +1,17 @@
+{% extends 'bootstrap/base.html' %}
+{%block head%}
+    {{super()}}
+    <title>{% block title %}Never Alone | {% endblock %}</title>
+    <link rel=stylesheet type=text/css href="static\styles\style.css">
+{%endblock%}
+
+
+{% block body%}
+        {% block navbar%}
+            {%include 'navbar.html'%}
+        {% endblock %}
+
+        {% block content %}
+
+        {% endblock %}
+{% endblock %}

@@ -1,12 +1,19 @@
-from flask import Flask
+from flask import *
+from flask_bootstrap import Bootstrap
 
 def webserver():
     app = Flask(__name__)
+    app.config['DEBUG'] = True
+    app.config['TEMPLATES_AUTO_RELOAD']=True
+    bootstrap = Bootstrap(app)
 
     @app.route('/')
     def index():
-        message='Hola mundo'
-        return message
+        context={
+            'user_ip':request.remote_addr
+        }
+
+        return render_template('index.html', **context)
     
     return app
 

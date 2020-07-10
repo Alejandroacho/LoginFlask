@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 flask = "*"
 pytest = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.8"
