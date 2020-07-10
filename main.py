@@ -9,11 +9,7 @@ def webserver():
 
     @app.route('/')
     def index():
-        context={
-            'user_ip':request.remote_addr
-        }
-
-        return render_template('index.html', **context)
+        return render_template('index.html')
     
     return app
 
