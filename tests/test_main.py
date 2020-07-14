@@ -1,4 +1,4 @@
-from main import *
+from main import webserver
 import pytest
  
 @pytest.fixture
