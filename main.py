@@ -1,16 +1,14 @@
 from flask import *
 from flask_bootstrap import Bootstrap
+from app import create_app
 
 def webserver():
-    app = Flask(__name__)
-    app.config['DEBUG'] = True
-    app.config['TEMPLATES_AUTO_RELOAD']=True
-    bootstrap = Bootstrap(app)
+    app=create_app()
 
     @app.route('/')
     def index():
         return render_template('index.html')
-    
+
     return app
 
 if __name__=='__main__':
